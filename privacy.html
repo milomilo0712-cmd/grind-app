@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | GRIND</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0c0f;
+    --s1: #131316;
+    --s2: #1a1a1e;
+    --s3: #222228;
+    --text: #f0f0f4;
+    --muted: #7a7a88;
+    --muted2: #a0a0b0;
+    --acc: #c97b7b;
+    --r: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    padding-bottom: 80px;
+  }
+
+  /* ヘッダー */
+  header {
+    border-bottom: 1px solid #ffffff08;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    background: rgba(12,12,15,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .logo-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .doc-type {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* コンテンツ */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+  }
+
+  .page-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .page-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ffffff08;
+  }
+  .page-meta span {
+    color: var(--acc);
+  }
+
+  /* セクション */
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 18px;
+    background: var(--acc);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  p {
+    color: var(--muted2);
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  ul li {
+    color: var(--muted2);
+    padding: 6px 0 6px 20px;
+    position: relative;
+    border-bottom: 1px solid #ffffff04;
+  }
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--acc);
+    font-size: 12px;
+  }
+
+  /* カード */
+  .card {
+    background: var(--s1);
+    border: 1px solid #ffffff07;
+    border-radius: var(--r);
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  /* 第三者サービステーブル */
+  .service-grid {
+    display: grid;
+    gap: 8px;
+  }
+  .service-item {
+    background: var(--s1);
+    border: 1px solid #ffffff07;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .service-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+    min-width: 120px;
+    flex-shrink: 0;
+  }
+  .service-desc {
+    font-size: 12px;
+    color: var(--muted2);
+    line-height: 1.6;
+  }
+
+  /* お問い合わせ */
+  .contact-box {
+    background: linear-gradient(135deg, #c97b7b12, #7aa8c812);
+    border: 1px solid #c97b7b30;
+    border-radius: var(--r);
+    padding: 24px;
+    text-align: center;
+  }
+  .contact-box p {
+    color: var(--muted2);
+    margin-bottom: 12px;
+  }
+  .contact-email {
+    font-size: 15px;
+    color: var(--acc);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* フッター */
+  footer {
+    border-top: 1px solid #ffffff08;
+    padding: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 60px;
+  }
+
+  /* ナビ */
+  .toc {
+    background: var(--s1);
+    border: 1px solid #ffffff07;
+    border-radius: var(--r);
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .toc-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .toc a {
+    display: block;
+    font-size: 13px;
+    color: var(--muted2);
+    text-decoration: none;
+    padding: 5px 0;
+    border-bottom: 1px solid #ffffff04;
+    transition: color .15s;
+  }
+  .toc a:hover { color: var(--text); }
+  .toc a:last-child { border-bottom: none; }
+  .toc-num {
+    color: var(--acc);
+    margin-right: 8px;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo-text">GRIND</span>
+  <span class="doc-type">Privacy Policy</span>
+</header>
+
+<div class="container">
+
+  <h1 class="page-title">プライバシーポリシー</h1>
+  <div class="page-meta">
+    制定日：2025年4月　最終更新：<span>2025年4月</span><br>
+    本ポリシーはGRIND（以下「本サービス」）における個人情報の取り扱いを定めます。
+  </div>
+
+  <!-- 目次 -->
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <a href="#s1"><span class="toc-num">01</span>収集する情報</a>
+    <a href="#s2"><span class="toc-num">02</span>情報の利用目的</a>
+    <a href="#s3"><span class="toc-num">03</span>第三者サービスへの提供</a>
+    <a href="#s4"><span class="toc-num">04</span>データの保管・管理</a>
+    <a href="#s5"><span class="toc-num">05</span>ユーザーの権利</a>
+    <a href="#s6"><span class="toc-num">06</span>未成年者について</a>
+    <a href="#s7"><span class="toc-num">07</span>ポリシーの変更</a>
+    <a href="#s8"><span class="toc-num">08</span>お問い合わせ</a>
+  </div>
+
+  <!-- 1. 収集する情報 -->
+  <section id="s1">
+    <h2>収集する情報</h2>
+    <p>本サービスでは以下の情報を収集します。</p>
+
+    <div class="card">
+      <div class="card-title">アカウント情報</div>
+      <ul>
+        <li>メールアドレス（ログイン用）</li>
+        <li>表示名・アバター設定</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">フィットネスデータ</div>
+      <ul>
+        <li>身長・体重・年齢・性別</li>
+        <li>トレーニング記録（種目・重量・セット数・日付）</li>
+        <li>ボディメジャメント（任意入力）</li>
+        <li>トレーニング目標・経験レベル</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">利用状況データ</div>
+      <ul>
+        <li>AI機能の使用回数（コスト管理目的）</li>
+        <li>アプリ内の投稿・いいね・コメント</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. 利用目的 -->
+  <section id="s2">
+    <h2>情報の利用目的</h2>
+    <ul>
+      <li>トレーニング記録の保存・表示・分析</li>
+      <li>AIコーチによる個人最適化されたアドバイス生成</li>
+      <li>プラン提案・食事メニュー提案への活用</li>
+      <li>SNS機能（他ユーザーとの共有）</li>
+      <li>サービスの改善・不具合対応</li>
+      <li>利用規約違反への対応</li>
+    </ul>
+    <p>収集した情報を広告目的に利用すること、および第三者への販売は一切行いません。</p>
+  </section>
+
+  <!-- 3. 第三者提供 -->
+  <section id="s3">
+    <h2>第三者サービスへの提供</h2>
+    <p>本サービスは以下の第三者サービスを利用しており、各社のプライバシーポリシーが適用されます。</p>
+    <div class="service-grid">
+      <div class="service-item">
+        <div class="service-name">Supabase</div>
+        <div class="service-desc">データベース・認証サービス。アカウント情報・トレーニングデータを保管します。<br><a href="https://supabase.com/privacy" style="color:var(--acc);font-size:11px;" target="_blank">プライバシーポリシー →</a></div>
+      </div>
+      <div class="service-item">
+        <div class="service-name">Anthropic</div>
+        <div class="service-desc">AI機能（AIコーチ・食事提案・プラン生成）に使用。体重・目標・記録データがAPIに送信されます。入力データはモデルの学習には使用されません。<br><a href="https://www.anthropic.com/privacy" style="color:var(--acc);font-size:11px;" target="_blank">プライバシーポリシー →</a></div>
+      </div>
+      <div class="service-item">
+        <div class="service-name">Vercel</div>
+        <div class="service-desc">ホスティングサービス。アクセスログが記録される場合があります。<br><a href="https://vercel.com/legal/privacy-policy" style="color:var(--acc);font-size:11px;" target="_blank">プライバシーポリシー →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. データの保管 -->
+  <section id="s4">
+    <h2>データの保管・管理</h2>
+    <ul>
+      <li>データはSupabaseのサーバー（AWS）に暗号化して保管されます</li>
+      <li>通信はHTTPS（TLS）で暗号化されます</li>
+      <li>パスワードは安全にハッシュ化して保管されます</li>
+      <li>βテスト期間中はデータの永続性を保証しかねる場合があります</li>
+    </ul>
+  </section>
+
+  <!-- 5. ユーザーの権利 -->
+  <section id="s5">
+    <h2>ユーザーの権利</h2>
+    <p>ユーザーはいつでも以下を行う権利を持ちます。</p>
+    <ul>
+      <li>アプリ内「設定 → データを初期化」からすべての記録を削除できます</li>
+      <li>アカウントの削除をご希望の場合はお問い合わせください</li>
+      <li>保有データの開示請求はメールにてお受けします</li>
+    </ul>
+  </section>
+
+  <!-- 6. 未成年者 -->
+  <section id="s6">
+    <h2>未成年者について</h2>
+    <p>本サービスは13歳未満の方のご利用を想定していません。13歳未満の方の情報を意図せず収集した場合は、速やかに削除します。</p>
+  </section>
+
+  <!-- 7. ポリシーの変更 -->
+  <section id="s7">
+    <h2>ポリシーの変更</h2>
+    <p>本ポリシーを変更する場合は、アプリ内またはTwitterにて事前にお知らせします。変更後も継続してご利用いただいた場合、変更後のポリシーに同意したものとみなします。</p>
+  </section>
+
+  <!-- 8. お問い合わせ -->
+  <section id="s8">
+    <h2>お問い合わせ</h2>
+    <div class="contact-box">
+      <p>プライバシーに関するご質問・削除依頼はこちら</p>
+      <a class="contact-email" href="mailto:milomilo0712@gmail.com">milomilo0712@gmail.com</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 GRIND. All rights reserved.
+</footer>
+
+</body>
+</html>
